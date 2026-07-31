@@ -126,6 +126,10 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
 nav ul {
     display: flex;
     list-style: none;

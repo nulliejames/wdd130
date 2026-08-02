@@ -4,77 +4,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header and Nav Layout</title>
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <meta name="description"
+      content="Learn about White Water Rafting Adventures, our history, mission, and exciting river adventures for families and outdoor enthusiasts.">
+    <meta name="author" content="Nullie James">
+    <link rel="stylesheet" href="styles/rafting.css">
+    <title>About Us | White Water Rafting Adventures</title>
+
 </head>
 
 <body>
     <header>
-        <img src="https://brotherblazzard.github.io/images/icons/coloredGears.png" alt="Sample Logo">
-        <div id="logo">Wasatch Accusystems</div>
+
+        <img src="images/logo.png" alt="White Water Rafting Logo">
+
         <nav>
-            <ul class="navigation">
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
+
     <main>
-        <h1>Header and Nav Layouts</h1>
-        <section>
-            <h2>&lt;header&gt;: CSS Grid</h2>
-            <p>This header is an example of a CSS Grid layout. It uses the <code>display: grid;</code> property to
-                create a grid structure.</p>
-            <p>The header has three children elements: <code>&lt;img&gt;</code>, <code>&lt;div&gt;</code>, and
-                <code>&lt;nav&gt;</code>
-            </p>
-            <p>These elements are grid items since their parent is a grid container and so these elements participate in
-                the grid layout.</p>
-            <p>The header uses the following CSS declarations to create the grid layout:
-            <pre><code>display: grid;
- grid-template-columns: 120px 1fr 1fr;
- align-items: center;</code></pre>
-            </p>
-            <p>As a result, the header is divided into three areas: a logo area, a title area, and a navigation area
-                that are side by side.</p>
 
-            <ul>
-                <li><code>display</code> makes the header a grid</li>
-                <li><code>grid-template-columns</code> defines that there are three columns, the first one at a fixed
-                    size of 120px and the rest sharing equally the rest of the space</li>
-                <li><code>align-items</code> aligns the grid items to the middle of the header (the grid)</li>
-            </ul>
+        <section class="hero">
+
+            <img src="images/rafting.jpg" alt="Rafting">
+
+            <h1>White Water Rafting</h1>
+
+            <article>
+
+                <p>
+                    White Water Rafting Adventures provides unforgettable
+                    outdoor experiences for families, friends, and adventure
+                    seekers.
+                </p>
+
+                <img src="images/rapid-run.jpg" alt="Happy rafter">
+
+            </article>
 
         </section>
 
-        <section>
-            <h2>&lt;nav&gt;: CSS Flexbox</h2>
-            <p>This navigation is an example of a CSS Flexbox layout. It uses the <code>display: flex;</code> property
-                to
-                create a flexible layout.</p>
-            <p>The nav has one child element: <code>&lt;ul&gt;</code> which has to be the Flex container because its
-                child elements (the list items) need to work together as flex items.</p>
-            <p>The <code>ul</code> with the class of <code>navigation</code> uses the following CSS declarations to
-                create the flex layout:
-            <pre><code>display: flex;
- list-style: none;</code></pre>
-            </p>
-            <p>As a result, the nav items are evenly distributed within the nav area.</p>
-            <ul>
-                <li><code>display</code> makes the nav a flex container</li>
-                <li><code>list-style</code> removes the default list styling</li>
-            </ul>
+        <section class="history">
 
-            <p>The <code>li</code> (list items) <code>flex</code> property is used on the list items to control their
-                size and how they grow or shrink within the nav.</p>
-            <pre><code>flex: 1 1 auto;</code></pre>
+            <h2>History</h2>
+
+            <div class="history-grid">
+
+                <p>
+                    White Water Rafting Adventures began with a passion for exploring rivers
+                    and sharing the excitement of outdoor adventures with others. From humble
+                    beginnings, our company has grown into a trusted rafting destination,
+                    welcoming families, friends, and adventure seekers from around the world.
+                    We are committed to providing safe, enjoyable, and unforgettable
+                    experiences on every trip.
+                </p>
+
+                <img src="images/rapid-run.jpg" alt="History  of White Water Rafting Adventures">
+
+                <p>
+                    Over the years, our experienced guides have led thousands of guests through
+                    breathtaking rivers and exciting rapids while promoting teamwork, respect
+                    for nature, and environmental stewardship. Today, White Water Rafting
+                    Adventures continues to create lasting memories by combining professional
+                    service, modern equipment, and a spirit of adventure for every visitor.
+                </p>
+
+            </div>
+
         </section>
+
+        <section class="adventures">
+
+            <h2>Adventure Awaits You</h2>
+
+            <div class="adventure-grid">
+
+                <figure>
+                    <img src="images/los-dientes.jpg" alt="Los Dientes del Diablo">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/big-mallard.jpg" alt="Big Mallard">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/half-day.jpg" alt="Half Day Adventure">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/rapid-run.jpg" alt="Rapid Run">
+                    <figcaption>Rapid Run</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/sunset-rapids.jpg" alt="Sunset Rapids">
+                    <figcaption>Thunder Rapids</figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
     </main>
+    <footer>
+        <p>
+            &copy; 2026 White Water Rafting Adventures 🌳 Nullie James 🌳 Freetown, Sierra Leone
+        </p>
+
+        <div class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook-bw.svg" alt="Facebook">
+            </a>
+
+            <a href="https://linkedin.com">
+                <img src="images/linkedin-bw.svg" alt="LinkedIn">
+            </a>
+
+            <a href="https://instagram.com">
+                <img src="images/instagram-bw.svg" alt="Instagram">
+            </a>
+        </div>
+    </footer>
 
 </body>
 

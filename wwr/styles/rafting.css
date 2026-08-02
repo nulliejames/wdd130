@@ -15,12 +15,16 @@
 
 /*---Header---*/
 header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    background-color: #d8c8f5;
+    padding: 20px;
 }
 
 header img {
-    width: 100%;
+    width: 120px;
+    justify-content: center;
 }
 
 /*---Main Reset---*/

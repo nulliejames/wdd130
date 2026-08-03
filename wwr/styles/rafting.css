@@ -1,18 +1,16 @@
 /*------- Variables -------*/
+
 :root {
   --primary-color: #055a05;
-  /* Forest Green */
   --secondary-color: #f4a261;
-  /* Warm Sand */
   --accent1-color: #264653;
-  /* Dark Slate Blue */
   --accent2-color: #e9c46a;
-  /* Light Golden Yellow */
   --heading-font: "Times New Roman", Georgia, serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
 
 /*------- Reset -------*/
+
 * {
   margin: 0;
   padding: 0;
@@ -20,11 +18,17 @@
 }
 
 /*------- Body -------*/
+
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
-  background: #fff;
+  background: #ffffff;
   line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-family: var(--heading-font);
 }
 
 header,
@@ -35,7 +39,7 @@ footer {
 }
 
 /*==========================
-  HEADER (CSS GRID)
+ HEADER - CSS GRID
 ==========================*/
 
 header {
@@ -53,30 +57,30 @@ header img {
 }
 
 /*==========================
-  NAVIGATION (FLEX)
+ NAVIGATION - FLEX
 ==========================*/
 
 nav {
   display: flex;
   justify-content: center;
-  gap: 0px;
 }
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: var(--accent1-color);
   font-weight: bold;
   padding: 12px 28px;
   border: 1px solid var(--accent1-color);
-  background: white;
+  background: #ffffff;
 }
 
 nav a:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  color: #ffffff;
 }
 
 /*==========================
-  HERO SECTION
+ HERO SECTION
 ==========================*/
 
 .hero {
@@ -84,7 +88,7 @@ nav a:hover {
   margin-top: 15px;
 }
 
-.hero img {
+.hero > img {
   width: 100%;
   display: block;
 }
@@ -96,7 +100,7 @@ nav a:hover {
   text-align: center;
   font-size: 2rem;
   background: rgba(255, 255, 255, .7);
-  color: #000;
+  color: var(--accent1-color);
   padding: 10px;
 }
 
@@ -105,38 +109,36 @@ nav a:hover {
   left: 30px;
   right: 30px;
   bottom: 40px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
   background: rgba(255, 255, 255, .85);
-  border: 1px solid #666;
+  border: 1px solid #666666;
   padding: 18px;
-}
-
-.hero article p {
-  text-align: var(--heading-font);
-  flex: 1;
 }
 
 .hero article img {
   float: right;
   width: 110px;
+  margin-left: 15px;
   border: 2px solid var(--accent1-color);
 }
 
+.hero article p {
+  color: var(--accent1-color);
+}
+
 /*==========================
-  HISTORY SECTION
+ HISTORY SECTION
 ==========================*/
 
 .history {
   margin-top: 20px;
-  border: 1px solid #999;
+  border: 1px solid #999999;
   padding: 20px;
 }
 
 .history h2 {
   text-align: center;
   margin-bottom: 20px;
+  background-color: var(--secondary-color);
   font-size: 2rem;
 }
 
@@ -152,18 +154,19 @@ nav a:hover {
 }
 
 /*==========================
-  ADVENTURE SECTION
+ ADVENTURE SECTION
 ==========================*/
 
 .adventures {
   margin-top: 20px;
-  border: 1px solid #999;
+  border: 1px solid #999999;
   padding: 20px;
 }
 
 .adventures h2 {
   text-align: center;
   margin-bottom: 20px;
+  background-color: var(--secondary-color);
   font-size: 2rem;
 }
 
@@ -189,7 +192,7 @@ figcaption {
 }
 
 /*==========================
-  FOOTER
+ FOOTER
 ==========================*/
 
 footer {
@@ -197,7 +200,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   background: var(--accent2-color);
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   padding: 20px;
   margin-top: 20px;
 }
@@ -206,8 +209,11 @@ footer p {
   margin: 0;
 }
 
+/*==========================
+ SOCIAL MEDIA
+==========================*/
+
 .socialmedia {
-  background-color: var(--primary-color);
   display: flex;
   flex-direction: row;
   align-items: center;

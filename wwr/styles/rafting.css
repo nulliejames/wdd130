@@ -148,7 +148,7 @@ section {
 section h2 {
     text-align: center;
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--accent2-color);
     padding: 15px;
     margin-bottom: 20px;
 }

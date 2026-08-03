@@ -114,10 +114,12 @@ nav a:hover {
 }
 
 .hero article p {
+  text-align: var(--heading-font);
   flex: 1;
 }
 
 .hero article img {
+  float: right;
   width: 110px;
   border: 2px solid var(--accent1-color);
 }
@@ -205,6 +207,7 @@ footer p {
 }
 
 .socialmedia {
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: row;
   align-items: center;

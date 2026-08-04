@@ -2,20 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | White Water Rafting Adventures</title>
     <meta name="description"
-      content="Contact White Water Rafting Adventures for reservations, questions, trip information, and customer support.">
-    <meta name="author" content="Nullie James">
-    <link rel="stylesheet" href="styles/rafting2.css">
+      content="Contact White Water Rafting Adventures for reservations, questions, trip information, and customer support." />
+    <meta name="author" content="Nullie James" />
+
+    <!-- ✅ EXTERNAL CSS -->
+    <link rel="stylesheet" href="styles/rafting.css" />
 </head>
 
 <body>
+
+    <!-- ============================================================
+    HEADER – IDENTICAL to About Us page
+    ============================================================ -->
     <header>
-
-        <img src="images/logo.png" alt="White Water Rafting Logo">
-
+        <img src="images/logo.png" alt="White Water Rafting Logo" />
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -24,154 +28,132 @@
         </nav>
     </header>
 
+    <!-- ============================================================
+    MAIN
+    ============================================================ -->
     <main>
 
-        <section class="company-info">
-
-            <h1>Contact White Water Rafting Adventures Company</h1>
-
-            <p><strong>Address:</strong><br>
-                123 River Road<br>
-                Freetown, Sierra Leone
-            </p>
-
+        <!-- ---- Company Info (moved from header to main) ---- -->
+        <section class="company-hero">
+            <h1>White Water Rafting Company</h1>
             <p>
-                <strong>Phone:</strong><br>
-                +232 76 123456
+                123 Main River Street<br />
+                Kolob, California<br />
+                +1 999 999 9999<br />
+                info@whitewater.com
             </p>
-
-            <p>
-                <strong>Email:</strong><br>
-                info@raftingadventures.com
-            </p>
-
-        </section>
-        <section class="map">
-
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15788.539936846626!2d-13.163402080535882!3d8.388381734970334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf04e74342888e25%3A0xd74795482648dd4e!2sThe%20Church%20of%20Jesus%20Christ%20of%20Latter-day%20Saints!5e0!3m2!1sen!2ssl!4v1785808406491!5m2!1sen!2ssl"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"></iframe>">
-
         </section>
 
-        <section class="employees">
+        <!-- ---- Contact Layout: Map + Form (side by side) ---- -->
+        <section class="contact-layout">
 
-            <h2>Meet Our Team</h2>
+            <!-- Google Map – FIXED iframe -->
+            <div class="map-card">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15788.539936846604!2d-13.164947032928476!3d8.388381734970334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf04e74342888e25%3A0xd74795482648dd4e!2sThe%20Church%20of%20Jesus%20Christ%20of%20Latter-day%20Saints!5e0!3m2!1sen!2ssl!4v1785875788976!5m2!1sen!2ssl"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <div class="map-footer">
+                    <span>📍</span>
+                    <span><strong>Find us:</strong> 123 Main River Street, Kolob, California</span>
+                </div>
+            </div>
 
-            <figure>
+            <!-- Contact Form -->
+            <form class="contact-form" action="#" method="post">
 
-                <img src="images/avero.jpg" alt="River Guide">
+                <div class="form-title">Get in Touch</div>
 
-                <figcaption>
-                    John Kamara<br>
-                    Senior River Guide
-                </figcaption>
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Placeholder"
+                  required />
 
-            </figure>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Placeholder" required />
 
-            <figure>
+                <fieldset>
+                    <legend>Purpose of Message</legend>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="purpose" value="general" checked />
+                            General Inquiry
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="reservation" />
+                            Reservation Question
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="website" />
+                            Website Suggestion
+                        </label>
+                    </div>
+                </fieldset>
 
-                <img src="images/wera.jpg" alt="Safety Officer">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Type here…" required></textarea>
 
-                <figcaption>
-                    Mary Cole<br>
-                    Safety Instructor
-                </figcaption>
+                <div class="checkbox-wrap">
+                    <input type="checkbox" id="newsletter" name="newsletter" />
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
 
-            </figure>
+                <button type="submit" class="submit-btn">Get in Touch!</button>
 
-            <figure>
+            </form>
 
-                <img src="images/rafting.jpg" alt="Operations Manager">
+        </section>
 
-                <figcaption>
-                    David Williams<br>
-                    Operations Manager
-                </figcaption>
+        <!-- ---- Employee Profiles ---- -->
+        <section class="employee-section">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-grid">
 
-            </figure>
+                <figure>
+                    <img src="images/avero.jpg" alt="Senior River Guide" />
+                    <figcaption>
+                        Employee Profile
+                        <small>Senior River Guide</small>
+                    </figcaption>
+                </figure>
 
-            <label for="fullname">Full Name</label>
+                <figure>
+                    <img src="images/wera.jpg" alt="Safety Instructor" />
+                    <figcaption>
+                        Employee Profile
+                        <small>Safety Instructor</small>
+                    </figcaption>
+                </figure>
 
-            <input type="text" id="fullname" name="fullname" required>
+                <figure>
+                    <img src="images/rafting.jpg" alt="Operations Manager" />
+                    <figcaption>
+                        Employee Profile
+                        <small>Operations Manager</small>
+                    </figcaption>
+                </figure>
 
-            <label for="email">Email</label>
-
-            <input type="email" id="email" name="email" required>
-
-            <fieldset>
-
-                <legend>Purpose of Message</legend>
-
-                <label>
-
-                    <input type="radio" name="purpose" value="general" checked>
-
-                    General Inquiry
-
-                </label>
-
-                <label>
-
-                    <input type="radio" name="purpose" value="reservation">
-
-                    Reservation Question
-
-                </label>
-
-                <label>
-
-                    <input type="radio" name="purpose" value="website">
-
-                    Website Suggestion
-
-                </label>
-
-            </fieldset>
-
-            <label for="message">
-
-                Message
-
-            </label>
-
-            <textarea id="message" name="message" rows="6">
-
-            </textarea>
-
-            <label>
-
-                <input type="checkbox" name="newsletter">
-
-                Please subscribe me to the monthly newsletter.
-
-            </label>
-
-            <button type="submit">
-
-                Send Message
-
-            </button>
+            </div>
         </section>
 
     </main>
+
+    <!-- ============================================================
+    FOOTER – IDENTICAL to About Us page
+    ============================================================ -->
     <footer>
         <p>
-            &copy; 2026 White Water Rafting Adventures 🌳 Nullie James 🌳 Freetown, Sierra Leone
+            &copy; 2026 White Water Rafting Adventures &nbsp;🌳&nbsp;
+            <strong>Nullie James</strong> &nbsp;•&nbsp; Freetown, Sierra Leone
         </p>
-
         <nav class="socialmedia">
-            <a href="https://facebook.com">
-                <img src="images/facebook-bw.svg" alt="Facebook">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                <img src="images/facebook-bw.svg" alt="Facebook" />
             </a>
-
-            <a href="https://linkedin.com">
-                <img src="images/linkedin-bw.svg" alt="LinkedIn">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="images/linkedin-bw.svg" alt="LinkedIn" />
             </a>
-
-            <a href="https://instagram.com">
-                <img src="images/instagram-bw.svg" alt="Instagram">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                <img src="images/instagram-bw.svg" alt="Instagram" />
             </a>
         </nav>
     </footer>

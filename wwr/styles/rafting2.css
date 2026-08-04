@@ -1,0 +1,307 @@
+/*---existing code---*/
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: #d8c8ff;
+  /* light purple */
+  --accent-2: #cbb7ff;
+  --muted: #f4f4f4;
+  --border: #cfcfcf;
+  --text: #111;
+  --rounded: 6px;
+  --max-width: 840px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #fff;
+  justify-content: center;
+  padding: 18px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+/* Header */
+header {
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-2) 100%);
+  border: 2px solid #8f8f8f;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 4px;
+}
+
+header img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) inset;
+}
+
+header nav {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header nav a {
+  text-decoration: none;
+  background: #fff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  font-weight: 600;
+}
+
+/* Main layout */
+main {
+  margin-top: 26px;
+  display: left;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Company intro spans full width */
+.company-info {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+.company-info h1 {
+  margin: 6px 0 4px;
+  font-size: 26px;
+  letter-spacing: 0.2px;
+}
+
+.company-info p {
+  margin: 2px 0;
+  font-size: 20px;
+  color: #222;
+}
+
+/* Map & form columns */
+.map {
+  background: var(--muted);
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  border: 0;
+  border-radius: 4px;
+}
+
+/* Employees section used as right column for contact form + team area below */
+.employees {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 12px;
+}
+
+/* Reorder children so form elements appear before figure profiles */
+.employees > figure {
+  order: 2;
+}
+
+.employees > label,
+.employees > input,
+.employees > fieldset,
+.employees > textarea,
+.employees > button {
+  order: 1;
+}
+
+/* Form elements styling */
+label {
+  display: block;
+  margin: 8px 0 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+fieldset {
+  border: none;
+  padding: 6px 0;
+  margin: 8px 0;
+}
+
+fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 12px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #efefef;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Team profiles block (appear after form) */
+.employees .team {
+  grid-column: 1 / -1;
+}
+
+/* Style figure cards inside employees */
+.employees > figure {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  background: #fff;
+}
+
+figure img {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #eee;
+}
+
+figcaption {
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+/* Large "We Are Here" team area (below main grid) */
+.team-area {
+  margin-top: 22px;
+  border: 2px solid var(--border);
+  padding: 18px;
+  background: linear-gradient(180deg, #fff, #fafafa);
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* inside team area - three columns */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.team-card {
+  background: var(--muted);
+  padding: 18px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* Footer */
+footer {
+  grid-column: 1 / -1;
+  margin-top: 18px;
+  background: var(--accent);
+  border: 2px solid #8f8f8f;
+  padding: 12px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 600;
+}
+
+footer .socialmedia a img {
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+  }
+
+  header nav {
+    margin-left: 12px;
+    flex-wrap: wrap;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 10px;
+  }
+
+  header img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header nav a {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}

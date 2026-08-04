@@ -1,0 +1,188 @@
+/*==============================
+Variables
+==============================*/
+
+:root {
+  --primary-color: #055a05;
+  --secondary-color: #f4a261;
+  --accent1-color: #264653;
+  --accent2-color: #e9c46a;
+  --heading-font: "Times New Roman", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/*==============================
+Reset
+==============================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*==============================
+Body
+==============================*/
+
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+}
+
+header,
+main,
+footer {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/*==============================
+Header
+==============================*/
+
+header {
+  background: var(--primary-color);
+  padding: 10px;
+}
+
+header img {
+  width: 120px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: block;
+  margin-right: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: var(--body-font);
+}
+
+nav a:hover {
+  color: var(--accent2-color);
+}
+
+/*==============================
+Hero
+==============================*/
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+.hero h1 {
+
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  background: rgba(38, 70, 83, .8);
+  color: white;
+  padding: 15px;
+  font-size: 3rem;
+}
+
+.hero article {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 40px;
+  background: rgba(38, 70, 83, .75);
+  padding: 20px;
+}
+
+.hero article img {
+  float: right;
+  width: 140px;
+  margin-left: 20px;
+}
+
+.hero article p {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/*==============================
+History
+==============================*/
+.history {
+  margin-top: 20px;
+}
+
+.history h2 {
+  background: var(--accent1-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+.history p {
+  line-height: 1.5;
+}
+
+/*==============================
+Adventure
+==============================*/
+
+.adventures {
+  margin-top: 30px;
+}
+
+.adventures h2 {
+  background: var(--accent1-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 18px;
+}
+
+/*==============================
+Footer
+==============================*/
+
+footer {
+  border-top: 1px solid #ccc;
+  margin-top: 30px;
+  padding: 15px;
+  align-items: center;
+}
+
+footer p {
+  display: flex;
+}
+
+.socialmedia {
+  margin-top: 10px;
+  display: flex;
+}
+
+.socialmedia img {
+  width: 50px;
+  margin-right: 10px;
+}

@@ -143,6 +143,18 @@ nav a:hover {
   padding: 12px 16px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Hero text */
 .hero article p {
   margin: 0;
@@ -525,12 +537,25 @@ nav a:hover {
 /* ======= CONTACT FORM AREA ========= */
 .contact-form-area {
   width: 710px;
-  min-height: 250px;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 300px 250px;
   column-gap: 35px;
-  margin-bottom: 21px;
-  padding: 0 0;
+  align-items: start;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Contact section heading */
+
+.contact-form-area h2 {
+  grid-column: 1 / 3;
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-size: 20px;
+  color: var(--accent1-color);
+  background-color: var(--primary-color);
+  padding: 15px 30px;
+  margin-top: 7px;
 }
 
 /* Map */

@@ -691,16 +691,22 @@ nav a:hover {
 }
 
 /* Radio Buttons */
-
 .radio-group {
-  margin: 5px 0 8px 65px;
+  margin: 8px 0 10px;
+  padding: 0;
+  border: 0;
+}
+
+.radio-group legend {
+  margin-bottom: 5px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .radio-group label {
   display: block;
-
-  margin-bottom: 7px;
-
+  margin-bottom: 6px;
   font-size: 12px;
 }
 
@@ -821,27 +827,39 @@ footer p {
   text-align: center;
 }
 
-/* Footer social media navigation */
-
-footer .socialmedia {
+footer nav.socialmedia {
   position: absolute;
   right: 20px;
   top: 11px;
   display: flex;
   align-items: center;
   gap: 10px;
+  background: transparent;
 }
 
-footer .socialmedia a {
+footer nav.socialmedia a {
   display: block;
   width: 31px;
   height: 31px;
+  margin: 0;
   padding: 0;
+  border: none;
+  background: transparent;
+  text-decoration: none;
 }
 
-footer .socialmedia a img {
+footer nav.socialmedia a:hover {
+  background: transparent;
+  border: none;
+}
+
+footer nav.socialmedia a img {
   display: block;
   width: 31px;
   height: 31px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
   object-fit: contain;
 }

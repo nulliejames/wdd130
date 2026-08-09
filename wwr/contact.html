@@ -4,127 +4,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>White Water Rafting | Contact Us</title>
+
   <meta name="description"
-    content="Contact White Water Rafting Adventures for reservations, questions, trip information, and customer support.">
+    content="Contact White Water Rafting Company for reservations, questions, and rafting information.">
+
   <meta name="author" content="Nullie James">
+
   <link rel="stylesheet" href="styles/rafting.css">
-  <title>Contact Us | White Water Rafting Adventures</title>
 </head>
 
 <body>
+
+  <!-- ================= HEADER ================= -->
+
   <header>
-    <img src="images/logo.png" alt="White Water Rafting Logo" />
+
+    <img src="images/logo.png" alt="White Water Rafting Logo">
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="trips.html">Trips</a>
       <a href="contact.html">Contact Us</a>
     </nav>
+
   </header>
 
+
+  <!-- ================= MAIN ================= -->
+
   <main>
-    <section class="company-hero">
+
+    <!-- CONTACT INTRO -->
+
+    <section class="contact-intro">
+
       <h1>White Water Rafting Company</h1>
-      <p>
+
+      <address>
         123 Main Motor Road<br>
         Grafton, Freetown<br>
-        +232 74 825623<br>
+        +232 74 825 623<br>
         info@whitewater.com
-      </p>
+      </address>
+
     </section>
 
-    <section class="contact-layout">
-      <div class="map-card">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15788.539938267624!2d-13.164947!3d8.3883817!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf04e74342888e25%3A0xd74795482648dd4e!2sThe%20Church%20of%20Jesus%20Christ%20of%20Latter-day%20Saints!5e0!3m2!1sen!2ssl!4v1786208311507!5m2!1sen!2ssl"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        <div class="map-footer">
-          <span>📍</span>
-          <span><strong>Find us:</strong> 123 Main Motor Road, Grafton, Freetown</span>
+
+    <!-- MAP AND FORM -->
+
+    <section class="contact-form-area">
+
+      <!-- MAP -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15788.329833089067!2d-13.165858983993525!3d8.393550746959619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf04e74342888e25%3A0xd74795482648dd4e!2sThe%20Church%20of%20Jesus%20Christ%20of%20Latter-day%20Saints!5e0!3m2!1sen!2ssl!4v1786249331847!5m2!1sen!2ssl"
+        width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <!-- FORM -->
+
+      <form class="contact-form">
+
+        <div class="form-row">
+
+          <label for="name">Name</label>
+
+          <input type="text" id="name" name="name" placeholder="Placeholder" required>
+
         </div>
 
-      </div>
 
-      <form class="contact-form" action="#" method="post">
-        <div class="form-title">Get in Touch</div>
+        <div class="form-row">
 
-        <label for="fullname">Full Name</label>
-        <input type="text" id="fullname" name="fullname" placeholder="Your name" required>
+          <label for="email">Email</label>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <input type="email" id="email" name="email" placeholder="Placeholder" required>
 
-        <fieldset>
-          <legend>Purpose of Message</legend>
-          <div class="radio-group">
-            <label>
-              <input type="radio" id="general" name="purpose" value="general" checked>
-              General Inquiry
-            </label>
-            <label>
-              <input type="radio" id="reservation" name="purpose" value="reservation">
-              Reservation Question
-            </label>
-            <label>
-              <input type="radio" id="website" name="purpose" value="website">
-              Website Suggestion
-            </label>
-          </div>
-        </fieldset>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Type your message here…"
-          required></textarea>
-
-        <div class="checkbox-wrap">
-          <input type="checkbox" id="newsletter" name="newsletter">
-          <label for="newsletter">Please subscribe me to the monthly newsletter</label>
         </div>
 
-        <button type="submit" class="submit-btn">Get in Touch!</button>
+
+        <!-- PURPOSE -->
+
+        <div class="radio-group">
+
+          <label>
+            <input type="radio" name="purpose" value="general" required>
+            General Inquiry
+          </label>
+
+          <label>
+            <input type="radio" name="purpose" value="reservation">
+            Reservation Question
+          </label>
+
+          <label>
+            <input type="radio" name="purpose" value="suggestion">
+            Website Suggestion
+          </label>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <label class="message-label" for="message">
+          Message
+        </label>
+
+        <textarea id="message" name="message" placeholder="Type here" required></textarea>
+
+
+        <!-- NEWSLETTER -->
+
+        <div class="subscribe">
+
+          <label for="subscribe">
+
+            <input type="checkbox" id="subscribe" name="subscribe">
+
+            Please Subscribe me to the monthly newsletter
+
+          </label>
+
+        </div>
+
+
+        <!-- BUTTON -->
+
+        <button type="submit">
+          Get in Touch!
+        </button>
+
       </form>
+
     </section>
 
-    <section class="employee-section">
+
+    <!-- EMPLOYEES -->
+
+    <section class="employees">
+
       <h2>We Are Here to Serve You</h2>
-      <div class="employee-grid">
-        <figure>
-          <img src="images/avero.jpg" alt="Senior River Guide">
-          <figcaption>
-            Employee Profile
-            <small>Senior River Guide</small>
-          </figcaption>
-        </figure>
-        <figure>
-          <img src="images/wera.jpg" alt="Safety Instructor">
-          <figcaption>
-            Employee Profile
-            <small>Safety Instructor</small>
-          </figcaption>
-        </figure>
-        <figure>
-          <img src="images/rafting.jpg" alt="Operations Manager">
-          <figcaption>
-            Employee Profile
-            <small>Operations Manager</small>
-          </figcaption>
-        </figure>
-      </div>
+
+
+      <figure class="employee">
+
+        <img src="images/avero.jpg" alt="Employee profile">
+
+        <figcaption>
+          Employee Profile
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="employee">
+
+        <img src="images/big-mallard.jpg" alt="Employee profile">
+
+        <figcaption>
+          Employee Profile
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="employee">
+
+        <img src="images/half-day.jpg" alt="Employee profile">
+
+        <figcaption>
+          Employee Profile
+        </figcaption>
+
+      </figure>
+
     </section>
+
   </main>
 
+
+  <!-- ================= FOOTER ================= -->
+
   <footer>
-    <p>&copy; 2026 White Water Rafting Adventures 🌳 Nullie James 🌳 Freetown, Sierra Leone</p>
+
+    <p>
+      Footer Content including Social Media Icons/Links
+    </p>
+
     <nav class="socialmedia">
-      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><img
-          src="images/facebook-bw.svg" alt="Facebook"></a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><img
-          src="images/linkedin-bw.svg" alt="LinkedIn"></a>
-      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><img
-          src="images/instagram-bw.svg" alt="Instagram"></a>
+
+      <a href="https://www.facebook.com">
+        <img src="images/facebook-bw.svg" alt="Facebook">
+      </a>
+
+      <a href="https://www.instagrams.com">
+        <img src="images/instagram-bw.svg" alt="Instagram">
+      </a>
+
+      <a href="https://www.linkedin.com">
+        <img src="images/linkedin-bw.svg" alt="LinkedIn">
+      </a>
+
     </nav>
+
   </footer>
+
 </body>
 
 </html>

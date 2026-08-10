@@ -22,10 +22,12 @@
 }
 
 /* =========================================================
-   RESET / GENERAL
+   UNIVERSAL RESET
    ========================================================= */
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -53,7 +55,6 @@ footer {
 
 main {
   background-color: var(--secondary-color);
-  padding: 0;
 }
 
 img {
@@ -80,7 +81,6 @@ header {
   margin-top: 9px;
   margin-bottom: 10px;
   padding: 13px 40px;
-
   background-color: var(--primary-color);
   border: 1px solid var(--dark-border);
 
@@ -109,14 +109,11 @@ header nav {
 header nav a {
   width: 87px;
   padding: 6px 8px;
-
   border: 1px solid var(--dark-border);
   background-color: var(--secondary-color);
-
   color: var(--accent1-color);
   text-align: center;
   text-decoration: none;
-
   font-size: 12px;
 }
 
@@ -139,61 +136,57 @@ header nav a:hover {
 .employees {
   border: 1px solid var(--border-color);
   background-color: var(--light-background);
-}
-
-.history,
-.adventure,
-.newsletter,
-.home-section,
-.trips-hero,
-.trip-list,
-.trip-table,
-.trip-cta,
-.employees {
   margin-bottom: 12px;
 }
 
 /* =========================================================
-   ABOUT PAGE
+   ABOUT PAGE - HERO
    ========================================================= */
 
 .hero {
   width: 710px;
   height: 192px;
-
   position: relative;
   margin-bottom: 12px;
-
   border: 1px solid #333333;
   overflow: hidden;
 }
+
+/* Direct hero image required by WDD 130 rubric */
+
+.hero > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero title */
 
 .hero h1 {
   position: absolute;
   top: 11px;
   left: 0;
-
   width: 100%;
   margin: 0;
-
   text-align: center;
   font-size: 21px;
   font-weight: normal;
-
+  color: var(--secondary-color);
   z-index: 2;
 }
+
+/* Hero article */
 
 .hero article {
   position: absolute;
   top: 47px;
   left: 27px;
   right: 27px;
-
   height: 94px;
   padding: 12px 16px;
-
   border: 1px solid var(--border-color);
-  background-color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0.92);
+  z-index: 2;
 }
 
 .hero article h2 {
@@ -204,34 +197,28 @@ header nav a:hover {
 .hero article p {
   width: 85%;
   margin: 0;
-
   font-size: 12px;
   line-height: 15px;
 }
 
 .hero article img {
   float: right;
-
   width: 38px;
   height: 60px;
-
   margin-left: 15px;
-
   object-fit: cover;
 }
 
+/* Visually hidden heading */
+
 .visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
-
   padding: 0;
   margin: -1px;
-
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-
   white-space: nowrap;
   border: 0;
 }
@@ -245,29 +232,23 @@ header nav a:hover {
   padding: 11px 30px;
 
   display: grid;
-
   grid-template-columns: 1fr 140px 1fr;
   grid-template-rows: 27px 1fr;
-
   column-gap: 18px;
 }
 
 .history h2 {
   grid-column: 1 / 4;
-
   margin: 0;
   padding: 3px;
-
   text-align: center;
   font-size: 21px;
-
   background-color: var(--primary-color);
   color: var(--accent1-color);
 }
 
 .history p {
   margin: 2px 0;
-
   font-size: 12px;
   line-height: 15px;
 }
@@ -282,10 +263,8 @@ header nav a:hover {
 
 .history img {
   grid-column: 2;
-
   width: 140px;
   height: 88px;
-
   object-fit: cover;
   align-self: center;
 }
@@ -305,31 +284,24 @@ header nav a:hover {
 
 .adventure h2 {
   width: 100%;
-
   margin: 0 0 10px;
   padding: 3px;
-
   text-align: center;
   font-size: 21px;
-
   background-color: var(--primary-color);
   color: var(--accent1-color);
 }
 
 .adventure figure {
   width: 112px;
-
   margin: 0;
-
   text-align: center;
 }
 
 .adventure figure img {
   width: 88px;
   height: 82px;
-
   margin: 0 auto 3px;
-
   object-fit: cover;
 }
 
@@ -344,10 +316,8 @@ header nav a:hover {
 .home-hero {
   width: 710px;
   height: 260px;
-
   position: relative;
   margin-bottom: 12px;
-
   border: 1px solid var(--dark-border);
   overflow: hidden;
 }
@@ -355,21 +325,16 @@ header nav a:hover {
 .home-hero > img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
 .home-hero-content {
   position: absolute;
-
   left: 30px;
   right: 30px;
   bottom: 25px;
-
   padding: 15px;
-
   background-color: rgba(255, 255, 255, 0.88);
-
   text-align: center;
 }
 
@@ -380,7 +345,6 @@ header nav a:hover {
 
 .home-hero-content p {
   margin: 0 0 10px;
-
   font-size: 13px;
   line-height: 17px;
 }
@@ -391,15 +355,11 @@ header nav a:hover {
 
 .cta-button {
   display: inline-block;
-
   padding: 7px 18px;
-
   background-color: var(--accent1-color);
   color: var(--secondary-color);
-
   border: 1px solid var(--border-color);
   border-radius: 3px;
-
   text-decoration: none;
   font-size: 12px;
 }
@@ -414,7 +374,6 @@ header nav a:hover {
 
 .newsletter {
   padding: 14px 30px;
-
   text-align: center;
 }
 
@@ -430,10 +389,8 @@ header nav a:hover {
 
 .newsletter form {
   display: flex;
-
   justify-content: center;
   align-items: center;
-
   gap: 6px;
 }
 
@@ -444,23 +401,17 @@ header nav a:hover {
 .newsletter input {
   width: 145px;
   height: 27px;
-
   padding: 5px;
-
   border: 1px solid var(--border-color);
   border-radius: 3px;
 }
 
 .newsletter button {
   height: 27px;
-
   padding: 0 14px;
-
   border: 1px solid var(--dark-border);
   border-radius: 3px;
-
   background-color: var(--button-background);
-
   font-size: 11px;
   cursor: pointer;
 }
@@ -471,15 +422,11 @@ header nav a:hover {
 
 .home-section {
   min-height: 170px;
-
   padding: 15px 30px;
 
   display: grid;
-
   grid-template-columns: 280px 1fr;
-
   column-gap: 25px;
-
   align-items: center;
 }
 
@@ -490,22 +437,18 @@ header nav a:hover {
 .home-section-image img {
   width: 270px;
   height: 135px;
-
   object-fit: cover;
-
   border: 1px solid var(--border-color);
 }
 
 .home-section-text h2 {
   margin: 0 0 8px;
   font-size: 20px;
-
   color: var(--accent1-color);
 }
 
 .home-section-text p {
   margin: 0 0 8px;
-
   font-size: 12px;
   line-height: 16px;
 }
@@ -515,6 +458,7 @@ header nav a:hover {
    ========================================================= */
 
 .trips-hero {
+  width: 710px;
   min-height: 100px;
   padding: 15px 20px;
   text-align: center;
@@ -537,6 +481,7 @@ header nav a:hover {
    ========================================================= */
 
 .trip-list {
+  width: 710px;
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -545,13 +490,10 @@ header nav a:hover {
 
 .trip-list h2 {
   grid-column: 1 / 3;
-
   margin: 0;
   padding: 7px;
-
   background-color: var(--primary-color);
   color: var(--accent1-color);
-
   text-align: center;
   font-size: 21px;
 }
@@ -563,13 +505,11 @@ header nav a:hover {
 .trip-card {
   width: 100%;
   min-height: 190px;
-
   border: 1px solid var(--border-color);
-
   background-color: var(--secondary-color);
-
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .trip-card > img {
@@ -604,8 +544,8 @@ header nav a:hover {
    ========================================================= */
 
 .trip-table {
-  width: calc(100% - 20px);
-  margin: 10px;
+  width: 710px;
+  margin: 10px 0 12px;
   padding: 0;
   text-align: center;
 }
@@ -613,10 +553,8 @@ header nav a:hover {
 .trip-table h2 {
   margin: 0 0 8px;
   padding: 8px;
-
   background-color: var(--primary-color);
   color: var(--accent1-color);
-
   border-radius: 4px;
   font-size: 19px;
 }
@@ -650,9 +588,8 @@ header nav a:hover {
    ========================================================= */
 
 .trip-cta {
-  width: 100%;
+  width: 710px;
   padding: 15px 20px;
-
   background-color: var(--primary-color);
   text-align: center;
 }
@@ -674,22 +611,18 @@ header nav a:hover {
 
 .contact-intro {
   margin-bottom: 12px;
-
   text-align: center;
 }
 
 .contact-intro h1 {
   margin: 0 0 4px;
-
   font-size: 21px;
   font-weight: normal;
 }
 
 .contact-intro address {
   font-style: normal;
-
   font-weight: bold;
-
   font-size: 12px;
   line-height: 15px;
 }
@@ -700,31 +633,20 @@ header nav a:hover {
 
 .contact-form-area {
   width: 710px;
-
   display: grid;
-
   grid-template-columns: 300px 250px;
-
   column-gap: 35px;
-
   align-items: start;
-
   margin-bottom: 20px;
 }
 
 .contact-form-area h2 {
   grid-column: 1 / 3;
-
   margin: 7px 0 10px;
-
   padding: 15px 30px;
-
   background-color: var(--primary-color);
-
   color: var(--accent1-color);
-
   text-align: center;
-
   font-size: 20px;
 }
 
@@ -733,9 +655,7 @@ header nav a:hover {
 .map {
   width: 300px;
   height: 300px;
-
   display: block;
-
   border: 1px solid var(--border-color);
 }
 
@@ -743,17 +663,13 @@ header nav a:hover {
 
 .contact-form {
   width: 250px;
-
   font-size: 12px;
 }
 
 .form-row {
   display: grid;
-
   grid-template-columns: 65px 1fr;
-
   align-items: center;
-
   margin-bottom: 5px;
 }
 
@@ -767,12 +683,9 @@ header nav a:hover {
 .contact-form input[type="email"] {
   width: 184px;
   height: 26px;
-
   padding: 5px;
-
   border: 1px solid var(--border-color);
   border-radius: 3px;
-
   font-size: 11px;
 }
 
@@ -780,26 +693,20 @@ header nav a:hover {
 
 .radio-group {
   margin: 8px 0 10px;
-
   padding: 0;
-
   border: 0;
 }
 
 .radio-group legend {
   margin-bottom: 5px;
-
   padding: 0;
-
   font-size: 12px;
   font-weight: bold;
 }
 
 .radio-group label {
   display: block;
-
   margin-bottom: 6px;
-
   font-size: 12px;
 }
 
@@ -807,23 +714,17 @@ header nav a:hover {
 
 .message-label {
   display: block;
-
   margin-bottom: 3px;
-
   font-size: 12px;
 }
 
 .contact-form textarea {
   width: 250px;
   height: 51px;
-
   padding: 5px;
-
   resize: none;
-
   border: 1px solid var(--border-color);
   border-radius: 3px;
-
   font-family: var(--body-font);
   font-size: 11px;
 }
@@ -832,7 +733,6 @@ header nav a:hover {
 
 .subscribe {
   margin: 5px 0 6px;
-
   font-size: 11px;
 }
 
@@ -841,14 +741,10 @@ header nav a:hover {
 .contact-form button {
   width: 250px;
   height: 26px;
-
   border: 1px solid var(--border-color);
   border-radius: 3px;
-
   background-color: var(--button-background);
-
   font-size: 11px;
-
   cursor: pointer;
 }
 
@@ -858,40 +754,30 @@ header nav a:hover {
 
 .employees {
   height: 130px;
-
   padding: 7px 30px;
 
   display: flex;
-
   flex-wrap: wrap;
-
   justify-content: space-around;
 }
 
 .employees h2 {
   width: 100%;
-
   margin: 0 0 5px;
-
   text-align: center;
-
   font-size: 19px;
 }
 
 .employee {
   width: 150px;
-
   margin: 0;
-
   text-align: center;
 }
 
 .employee img {
   width: 80px;
   height: 67px;
-
   margin: 0 auto 3px;
-
   object-fit: cover;
 }
 
@@ -906,35 +792,24 @@ header nav a:hover {
 footer {
   width: 710px;
   min-height: 55px;
-
   margin: 0 auto 20px;
-
   padding: 0 20px;
 
   background-color: var(--primary-color);
-
   border: 1px solid var(--dark-border);
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   position: relative;
 }
 
 footer p {
   margin: 0;
-
   padding: 0 120px 0 0;
-
   font-family: var(--body-font);
-
   font-size: 12px;
-
   line-height: 1.2;
-
   text-align: center;
 }
 
@@ -942,14 +817,11 @@ footer p {
 
 footer nav.socialmedia {
   position: absolute;
-
   right: 20px;
   top: 11px;
 
   display: flex;
-
   align-items: center;
-
   gap: 10px;
 
   background: transparent;
@@ -957,39 +829,30 @@ footer nav.socialmedia {
 
 footer nav.socialmedia a {
   display: block;
-
   width: 31px;
   height: 31px;
-
   margin: 0;
   padding: 0;
 
   border: none;
-
   background: transparent;
-
   text-decoration: none;
 }
 
 footer nav.socialmedia a:hover {
   background: transparent;
-
   border: none;
 }
 
 footer nav.socialmedia a img {
   display: block;
-
   width: 31px;
   height: 31px;
-
   margin: 0;
   padding: 0;
 
   border: none;
-
   background: transparent;
-
   object-fit: contain;
 }
 
@@ -1004,15 +867,17 @@ footer nav.socialmedia a img {
   footer,
   .hero,
   .home-hero,
+  .trips-hero,
+  .trip-list,
+  .trip-table,
+  .trip-cta,
   .contact-form-area {
     width: 100%;
   }
 
   header {
     height: auto;
-
     padding: 10px;
-
     grid-template-columns: 90px 1fr;
   }
 
@@ -1023,14 +888,25 @@ footer nav.socialmedia a img {
 
   header nav {
     flex-wrap: wrap;
-
     justify-content: center;
   }
 
   header nav a {
     width: auto;
-
     min-width: 70px;
+  }
+
+  .hero {
+    height: 220px;
+  }
+
+  .hero article {
+    left: 15px;
+    right: 15px;
+  }
+
+  .hero article p {
+    width: 80%;
   }
 
   .home-hero {
@@ -1040,13 +916,11 @@ footer nav.socialmedia a img {
   .home-section,
   .home-section.offerings {
     grid-template-columns: 1fr;
-
     gap: 12px;
   }
 
   .home-section-image img {
     width: 100%;
-
     height: 150px;
   }
 
@@ -1063,8 +937,7 @@ footer nav.socialmedia a img {
   }
 
   .trip-table {
-    margin: 12px 10px;
-
+    margin: 12px 0;
     overflow-x: auto;
   }
 
@@ -1072,9 +945,12 @@ footer nav.socialmedia a img {
     min-width: 600px;
   }
 
+  .trip-cta {
+    width: 100%;
+  }
+
   .contact-form-area {
     grid-template-columns: 1fr;
-
     padding: 0 15px;
   }
 
@@ -1101,7 +977,6 @@ footer nav.socialmedia a img {
 
   footer p {
     padding: 0 90px 0 0;
-
     font-size: 10px;
   }
 
